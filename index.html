@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline';" />
+  <title>Electron AI studio</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Electron AI studio</h1>
+  <p id="info"></p>
+
+  <div class="field-group">
+    <label for="selectModel">Model Selection</label>
+    <div style="display: flex; gap: 10px;">
+    <select id="selectModel" style="flex-grow: 1;"></select>
+    <button id="retryBtn" type="button" title="Reload Models">🔄 Retry</button>
+  </div>
+    <div style="margin-top: 10px;">
+      <label for="myInput">Input</label>
+      <textarea rows="4" id="myInput"
+        placeholder="Your request">For my MacbookPro M1 16GB, which AI model is the best with LM Studio?</textarea>
+    </div>
+  </div>
+
+  
+
+  <div style="margin-top: 10px;">
+    <button id="btn" type="button">Send Request</button>
+    <input type="checkbox" id="streamToggle" checked>
+    <label style="display: inline;" for="streamToggle">Streaming</label>
+  </div>
+
+  <div class="result-container">
+    <p id="stats"></p>
+    <strong>Result:</strong>
+
+    <p id="myResult">Awaiting input...</p>
+  </div>
+
+  <script src="./renderer.js"></script>
+</body>
+
+</html>

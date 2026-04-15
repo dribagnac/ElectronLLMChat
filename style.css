@@ -1,0 +1,142 @@
+:root {
+  --primary-color: #0078d4;
+  --bg-color: #f3f3f3;
+  --text-color: #333;
+  --border-radius: 4px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 24px;
+  margin: 0;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 0;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.field-group {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+input[type="text"], 
+select, 
+textarea {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: var(--border-radius);
+  background-color: #fff;
+  font-family: inherit;
+  font-size: 0.85rem;
+  box-sizing: border-box; /* Crucial for Electron window resizing */
+}
+
+textarea {
+  font-family: 'Cascadia Code', 'Consolas', monospace;
+  resize: vertical;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--primary-color);
+  outline-offset: -1px;
+}
+
+#btn {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+#btn:hover {
+  background-color: #005a9e;
+}
+
+#btn:active {
+  background-color: #004578;
+}
+
+.result-container {
+  margin-top: 24px;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: var(--border-radius);
+  min-height: 50px;
+}
+
+#myResult {
+  margin: 0;
+  white-space: normal;
+  word-wrap: break-word;
+  font-family: 'Cascadia Code', 'Consolas', monospace;
+  font-size: 0.85rem;
+  color: #222;
+}
+
+/* Paragraph spacing within the result */
+#myResult p {
+  margin: 0 0 11px 0;
+  display: block;
+}
+
+/* Ensure bold text is clearly visible */
+#myResult strong {
+  font-weight: 800;
+  color: #000;
+}
+
+#info {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+#btn:disabled {
+  background-color: #cccccc; /* Grey background */
+  color: #666666;            /* Muted text color */
+  cursor: not-allowed;       /* Change cursor to indicate it's unclickable */
+  opacity: 0.7;              /* Slight transparency */
+  border: 1px solid #999;
+}
+
+#retryBtn {
+  background-color: #6e6e6e;
+  color: white;
+  border: none;
+  padding: 0 15px;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: background 0.2s;
+  white-space: nowrap;
+}
+
+#retryBtn:hover {
+  background-color: #555;
+}
+
+#retryBtn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
